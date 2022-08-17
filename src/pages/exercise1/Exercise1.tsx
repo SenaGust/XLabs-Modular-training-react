@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "../../App/logo.svg";
+import "../../App/App.css";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={() => alert("hello world")}>Click here</button>
       </header>
     </div>
   );
