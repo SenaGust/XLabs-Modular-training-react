@@ -1,12 +1,4 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-
-interface FormValues {
-  dogName: string;
-  dogSize: "small" | "medium" | "large" | "giant";
-}
 
 export default function Exercise5() {
   const [dogName, setDogName] = useState<string>("");
@@ -25,9 +17,10 @@ export default function Exercise5() {
       <select
         id="cars"
         placeholder="Dog Size"
+        defaultValue={""}
         onChange={(event) => setDogSize(event.target?.value || "")}
       >
-        <option value="" selected disabled hidden>
+        <option value="" disabled hidden>
           Choose here
         </option>
         <option value="small">small</option>
