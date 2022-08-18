@@ -28,12 +28,11 @@ describe('getAllBreeds', () => {
             appenzeller: []
         })
     })
+
     it('should return correctly when error path', async () => {
         DogClient.get.mockRejectedValue(new Error())
 
-        const result = await getAllBreeds();
-
-        expect(result).toEqual([])
+        await expect(getAllBreeds).rejects.toThrow(new Error())
     })
 })
 

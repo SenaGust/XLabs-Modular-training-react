@@ -6,6 +6,7 @@ import Exercise4 from "../pages/exercise4/Exercise4";
 import Exercise5 from "../pages/exercise5/Exercise5";
 import Exercise6 from "../pages/exercise6/Exercise6";
 import Exercise7 from "../pages/exercise7/Exercise7";
+import Exercise10 from "../pages/exercise10/Exercise10";
 
 export default function AllRoutes() {
   return (
@@ -30,6 +31,9 @@ export default function AllRoutes() {
           <li>
             <Link to="/exercises/7">Exercício 7</Link>
           </li>
+          <li>
+            <Link to="/exercises/10">Exercício 10</Link>
+          </li>
         </ul>
 
         <hr />
@@ -43,6 +47,7 @@ export default function AllRoutes() {
             <Route path="5" element={<Exercise5 />} />
             <Route path="6" element={<Exercise6 />} />
             <Route path="7" element={<Exercise7 />} />
+            <Route path="10" element={<Exercise10 />} />
           </Route>
         </Route>
       </Routes>

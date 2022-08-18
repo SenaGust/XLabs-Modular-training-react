@@ -1,8 +1,15 @@
 import React from "react";
 import AllRoutes from "./AllRoutes";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
-  return <AllRoutes />;
+  const queryClient = new QueryClient();
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <AllRoutes />
+    </QueryClientProvider>
+  );
 }
 
 export default App;

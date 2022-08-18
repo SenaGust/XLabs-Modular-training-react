@@ -1,10 +1,15 @@
 import DogClient from "../../clients/DogClient";
 
-export default async function getAllBreeds() {
+interface DogObject {
+  [key: string]: Array<string>;
+}
+
+export default async function getAllBreeds(): Promise<DogObject> {
   try {
     const response = await DogClient.get("/breeds/list/all");
     return response.data.message;
   } catch (error) {
-    return [];
+    console.log(error);
+    throw error;
   }
 }
